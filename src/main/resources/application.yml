@@ -1,0 +1,23 @@
+spring:
+  thymeleaf:
+    mode: HTML5
+#    配置Thymeleaf是否使用缓存
+    cache: false
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/free?setUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.jdbc.Driver
+#    这里会提示出好几个username和password,看清楚,千万不能选错,选成datasource-username
+    username: root
+    password: root
+
+#    mybatis设置别名
+mybatis:
+  type-aliases-package: com.jip.springboot_ssm.entity
+#  这里还要配置映射文件路径
+  mapper-locations: classpath:com/jip/springboot_ssm/dao/mapper/*.xml
+
+debug: false
+
+#设置服务端口
+server:
+  port: 8080
